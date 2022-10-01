@@ -1,8 +1,11 @@
 <div>
   <header>
-    <app-header></app-header>
+    <app-header (path)="goto($event)"></app-header>
   </header>
-  <section>
+  <section *ngIf="showRecipe">
     <app-recipe-landing></app-recipe-landing>
+  </section>
+  <section *ngIf="!showRecipe">
+    <app-shopping-list-landing></app-shopping-list-landing>
   </section>
 </div>

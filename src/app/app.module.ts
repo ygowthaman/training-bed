@@ -7,18 +7,26 @@ import { RecipeLandingComponent } from './components/recipe/recipe-landing.compo
 import { HeaderComponent } from './components/header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './app-material.module';
+import { RecipeListComponent } from './components/recipe/recipe-list/recipe-list.component';
+import { RecipeDetailsComponent } from './components/recipe/recipe-details/recipe-details.component';
+import { ShoppingListLandingComponent } from './components/shopping-list/shopping-list-landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipeLandingComponent,
-    HeaderComponent
+    HeaderComponent,
+    RecipeListComponent,
+    RecipeDetailsComponent,
+    ShoppingListLandingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

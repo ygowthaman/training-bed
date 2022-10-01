@@ -1,0 +1,11 @@
+<div *ngFor="let rec of recipes" class="recipe-list">
+  <mat-card>
+    <mat-card-title fxLayout="row" fxLayoutAlign="space-between center">
+      <span>{{rec.name}}</span>
+      <a mat-icon-button color="primary" href="#" (click)="gotoRecipe(rec)">
+        <mat-icon fontSet="material-icons">arrow_circle_right</mat-icon>
+      </a>
+    </mat-card-title>
+    <mat-card-subtitle>{{rec.description}}</mat-card-subtitle>
+  </mat-card>
+</div>

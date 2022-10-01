@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'training-bed';
+  showRecipe: boolean = true;
+
+  goto(path: string) {
+    if (path === 'recipe') {
+      this.showRecipe = true;
+    } else {
+      this.showRecipe = false;
+    }
+  }
 }

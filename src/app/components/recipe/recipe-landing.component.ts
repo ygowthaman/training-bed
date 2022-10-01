@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recipe } from './recipe.model';
 
 @Component({
     selector: 'app-recipe-landing',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
     styleUrls: ['./recipe-landing.component.scss']
 })
 export class RecipeLandingComponent {
+
+    recipe: Recipe = new Recipe('', '');
+
+    setRecipe($event: Recipe) {
+        this.recipe = $event
+    }
 
 }
