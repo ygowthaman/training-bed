@@ -11,6 +11,7 @@ import { AppMaterialModule } from './app-material.module';
 import { RecipeListComponent } from './components/recipe/recipe-list/recipe-list.component';
 import { RecipeDetailsComponent } from './components/recipe/recipe-details/recipe-details.component';
 import { ShoppingListLandingComponent } from './components/shopping-list/shopping-list-landing.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ShoppingListLandingComponent } from './components/shopping-list/shoppin
     AppRoutingModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

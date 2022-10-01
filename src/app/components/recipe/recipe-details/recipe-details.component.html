@@ -1,4 +1,19 @@
 <div class="recipe-main-content">
   <h1>{{recipe.name}}</h1>
   <h3>{{recipe.description}}</h3>
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Ingredient</mat-label>
+      <input matInput type="text" [formControl]="ingredientName">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Quantity</mat-label>
+      <input matInput type="number" min="1" [formControl]="ingredientQuantity">
+    </mat-form-field>
+    <button mat-button color="primary" (click)="addIngredient()">
+      <mat-icon class="material-symbols-outlined">
+        add_circle
+      </mat-icon>Add Ingredient
+    </button>
+  </form>
 </div>

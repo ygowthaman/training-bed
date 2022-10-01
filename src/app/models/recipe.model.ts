@@ -1,7 +1,9 @@
+import { Ingredient } from "./ingredient";
+
 export class Recipe {
   name: string;
   description: string;
-  ingredients: string[];
+  ingredients: Ingredient[];
   steps: string[];
 
   constructor(name: string, desc: string) {

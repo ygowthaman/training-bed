@@ -6,6 +6,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
     imports: [
@@ -15,7 +17,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
         MatGridListModule,
         MatIconModule,
         MatButtonModule,
-        MatButtonToggleModule
+        MatButtonToggleModule,
+        MatFormFieldModule,
+        MatInputModule
     ],
     exports: [
         MatCardModule,
@@ -24,7 +28,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
         MatGridListModule,
         MatIconModule,
         MatButtonModule,
-        MatButtonToggleModule
+        MatButtonToggleModule,
+        MatFormFieldModule,
+        MatInputModule
     ]
 })
 export class AppMaterialModule { }

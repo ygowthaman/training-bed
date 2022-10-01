@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Recipe } from '../recipe.model';
+import { Recipe } from '../../../models/recipe.model';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-recipe-details',
@@ -9,10 +10,15 @@ import { Recipe } from '../recipe.model';
 export class RecipeDetailsComponent implements OnInit {
 
   @Input() recipe: Recipe = new Recipe('', '');
+  ingredientName = new FormControl('');
+  ingredientQuantity = new FormControl('0');
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  addIngredient() {
+
+  }
 }
