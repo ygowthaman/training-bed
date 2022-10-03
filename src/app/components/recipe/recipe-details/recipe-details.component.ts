@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Ingredient } from 'src/app/models/ingredient';
+import { RecipeService } from 'src/app/services/recipe.service';
 import { Recipe } from '../../../models/recipe.model';
 
 @Component({
@@ -8,13 +10,18 @@ import { Recipe } from '../../../models/recipe.model';
 })
 export class RecipeDetailsComponent implements OnInit {
 
-  @Input() recipe: Recipe = new Recipe('', '');
+  recipe: Recipe = new Recipe('', '');
 
-  constructor() { 
+  constructor(private recipeService: RecipeService) {
   }
 
   ngOnInit(): void {
+    this.recipeService.selectedRecipeEvent.subscribe((recipe) => {
+      this.recipe = recipe;
+    });
   }
 
-  
+  pushIngredient($event: Ingredient) {
+    this.recipe.ingredients.push($event);
+  }
 }

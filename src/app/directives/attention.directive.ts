@@ -5,10 +5,8 @@ import { Directive, HostListener } from "@angular/core";
 })
 export class AttentionDirective {
 
-
   @HostListener('recipe') recipe(eventData: any) {
     console.log(eventData);
   }
-
 
 }

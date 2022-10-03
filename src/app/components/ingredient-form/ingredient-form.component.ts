@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Ingredient } from 'src/app/models/ingredient';
 import { Recipe } from 'src/app/models/recipe.model';
@@ -10,7 +10,7 @@ import { Recipe } from 'src/app/models/recipe.model';
 })
 export class IngredientFormComponent implements OnInit {
 
-  @Input() recipe: Recipe = new Recipe('', '');
+  @Output() ingredientEvent = new EventEmitter<Ingredient>();
 
   recepFormGroup: FormGroup;
 
@@ -25,7 +25,8 @@ export class IngredientFormComponent implements OnInit {
   }
 
   addIngredient() {
-    this.recipe.ingredients.push(new Ingredient(this.recepFormGroup.value.ingredientName, this.recepFormGroup.value.ingredientQuantity))
+    const newIngredient = new Ingredient(this.recepFormGroup.value.ingredientName, this.recepFormGroup.value.ingredientQuantity);
+    this.ingredientEvent.emit(newIngredient);
     this.recepFormGroup.setValue({
       ingredientName: '',
       ingredientQuantity: 0

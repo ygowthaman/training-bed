@@ -1,8 +1,8 @@
 <mat-drawer-container class="drawer-container">
   <mat-drawer mode="side" opened>
-    <app-recipe-list (recipe)="recipe=$event"></app-recipe-list>
+    <app-recipe-list></app-recipe-list>
   </mat-drawer>
   <mat-drawer-content>
-    <app-recipe-details [recipe]="recipe"></app-recipe-details>
+    <app-recipe-details></app-recipe-details>
   </mat-drawer-content>
 </mat-drawer-container>

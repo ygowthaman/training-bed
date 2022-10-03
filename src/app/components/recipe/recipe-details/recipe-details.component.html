@@ -1,8 +1,18 @@
 <div class="recipe-main-content">
   <h1>{{recipe.name}}</h1>
   <h3>{{recipe.description}}</h3>
-  <app-ingredient-form [recipe]="recipe" *ngIf="recipe.name !== ''"></app-ingredient-form>
+  <app-ingredient-form *ngIf="recipe.name !== ''" (ingredientEvent)="pushIngredient($event)"></app-ingredient-form>
   <section *ngIf="recipe.name === ''">
     <p>Select a recipe!</p>
   </section>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+    </tr>
+    <tr *ngFor="let ing of recipe.ingredients">
+      <td>{{ing.name}}</td>
+      <td>{{ing.quantity}}</td>
+    </tr>
+  </table>
 </div>
