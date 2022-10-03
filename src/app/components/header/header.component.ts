@@ -19,4 +19,8 @@ export class HeaderComponent implements OnInit {
     this.path.emit(path);
   }
 
+  attention() {
+    
+  }
+
 }

@@ -1,0 +1,27 @@
+<section>
+  <form [formGroup]="recepFormGroup" (ngSubmit)="addIngredient()">
+    <mat-form-field appearance="fill">
+      <mat-label>Ingredient</mat-label>
+      <input matInput type="text" formControlName="ingredientName">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Quantity</mat-label>
+      <input matInput type="number" min="1" formControlName="ingredientQuantity">
+    </mat-form-field>
+    <button mat-button color="primary" [disabled]="!recepFormGroup.valid">
+      <mat-icon class="material-symbols-outlined">
+        add_circle
+      </mat-icon>Add Ingredient
+    </button>
+  </form>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+    </tr>
+    <tr *ngFor="let ing of recipe.ingredients">
+      <td>{{ing.name}}</td>
+      <td>{{ing.quantity}}</td>
+    </tr>
+  </table>
+</section>

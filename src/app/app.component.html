@@ -5,7 +5,7 @@
   <section *ngIf="showRecipe">
     <app-recipe-landing></app-recipe-landing>
   </section>
-  <section *ngIf="!showRecipe">
+  <section *appUnless="showRecipe">
     <app-shopping-list-landing></app-shopping-list-landing>
   </section>
 </div>

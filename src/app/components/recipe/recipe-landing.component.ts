@@ -7,11 +7,5 @@ import { Recipe } from '../../models/recipe.model';
     styleUrls: ['./recipe-landing.component.scss']
 })
 export class RecipeLandingComponent {
-
     recipe: Recipe = new Recipe('', '');
-
-    setRecipe($event: Recipe) {
-        this.recipe = $event
-    }
-
 }

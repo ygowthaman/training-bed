@@ -12,6 +12,9 @@ import { RecipeListComponent } from './components/recipe/recipe-list/recipe-list
 import { RecipeDetailsComponent } from './components/recipe/recipe-details/recipe-details.component';
 import { ShoppingListLandingComponent } from './components/shopping-list/shopping-list-landing.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IngredientFormComponent } from './components/ingredient-form/ingredient-form.component';
+import { AttentionDirective } from './directives/attention.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     RecipeListComponent,
     RecipeDetailsComponent,
-    ShoppingListLandingComponent
+    ShoppingListLandingComponent,
+    IngredientFormComponent,
+    AttentionDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
